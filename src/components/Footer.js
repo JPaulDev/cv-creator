@@ -8,6 +8,7 @@ const StyledFooter = styled.footer`
   align-items: center;
   background-color: #3b82f6;
   column-gap: 10px;
+  color: white;
 `;
 
 const GithubLogo = styled.img`
