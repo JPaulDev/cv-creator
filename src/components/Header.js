@@ -7,7 +7,7 @@ const StyledHeader = styled.header`
   justify-content: center;
   align-items: center;
   column-gap: 10px;
-  background-color: #60a5fa;
+  background-color: #3b82f6;
   color: white;
 `;
 
