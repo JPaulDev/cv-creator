@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import PersonalDetails from './PersonalDetails';
 import ContactInformation from './ContactInformation';
+import WorkExperience from './WorkExperience';
 
 const StyledForm = styled.form`
   display: flex;
@@ -15,6 +16,7 @@ function Form() {
     <StyledForm>
       <PersonalDetails />
       <ContactInformation />
+      <WorkExperience />
     </StyledForm>
   );
 }

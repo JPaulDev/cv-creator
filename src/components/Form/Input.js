@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledInput = styled.input`
-  min-width: 450px;
+  min-width: ${(props) => props.inputWidth || '450px'};
   min-height: 30px;
   border-radius: 5px;
   border: none;
@@ -19,6 +19,7 @@ function Input(props) {
         id={props.id}
         type={props.type}
         placeholder={props.placeholder}
+        inputWidth={props.inputWidth}
       />
     </>
   );
