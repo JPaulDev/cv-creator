@@ -1,14 +1,6 @@
-import styled from 'styled-components';
+import Fieldset from './Fieldset';
 import SectionHeader from './SectionHeader';
 import Input from './Input';
-
-const Fieldset = styled.fieldset`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 10px;
-  border: none;
-`;
 
 function ContactInformation() {
   return (
