@@ -50,12 +50,23 @@ function Main() {
     });
   }
 
+  function deleteExperience(e, id) {
+    e.preventDefault();
+
+    const updatedExperience = experience.filter(
+      (experience) => experience.id !== id,
+    );
+
+    setExperience(updatedExperience);
+  }
+
   return (
     <StyledMain>
       <Form
         experience={experience}
         handleExperienceChange={handleExperienceChange}
         addNewExperience={addNewExperience}
+        deleteExperience={deleteExperience}
       />
     </StyledMain>
   );

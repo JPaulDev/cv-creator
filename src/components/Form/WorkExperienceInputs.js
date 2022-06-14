@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Input from './Input';
 import TextArea from './TextArea';
+import Button from './Button';
 
 const Div = styled.div`
   display: flex;
@@ -54,6 +55,12 @@ function WorkExperienceInputs(props) {
         value={experienceItem.jobDescription}
         experienceId={experienceItem.id}
         handleChange={handleExperienceChange}
+      />
+      <Button
+        buttonText="Delete Employment"
+        deleteId={experienceItem.id}
+        onClick={props.onClick}
+        buttonColor="#f87171"
       />
     </>
   );

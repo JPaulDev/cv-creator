@@ -12,7 +12,12 @@ const StyledForm = styled.form`
 `;
 
 function Form(props) {
-  const { experience, handleExperienceChange, addNewExperience } = props;
+  const {
+    experience,
+    handleExperienceChange,
+    addNewExperience,
+    deleteExperience,
+  } = props;
 
   return (
     <StyledForm>
@@ -22,6 +27,7 @@ function Form(props) {
         experience={experience}
         handleExperienceChange={handleExperienceChange}
         addNewExperience={addNewExperience}
+        deleteExperience={deleteExperience}
       />
     </StyledForm>
   );

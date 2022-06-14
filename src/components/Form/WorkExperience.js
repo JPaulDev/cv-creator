@@ -4,7 +4,12 @@ import WorkExperienceInputs from './WorkExperienceInputs';
 import Button from './Button';
 
 function WorkExperience(props) {
-  const { experience, handleExperienceChange, addNewExperience } = props;
+  const {
+    experience,
+    handleExperienceChange,
+    addNewExperience,
+    deleteExperience,
+  } = props;
 
   return (
     <Fieldset>
@@ -15,6 +20,9 @@ function WorkExperience(props) {
             key={experienceItem.id}
             experienceItem={experienceItem}
             handleExperienceChange={handleExperienceChange}
+            buttonText="Delete Employment"
+            onClick={deleteExperience}
+            buttonColor="#f87171"
           />
         );
       })}
