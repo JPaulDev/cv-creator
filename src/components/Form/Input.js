@@ -1,3 +1,4 @@
+import React, { useId } from 'react';
 import styled from 'styled-components';
 
 const StyledInput = styled.input`
@@ -10,16 +11,21 @@ const StyledInput = styled.input`
 `;
 
 function Input(props) {
+  const id = useId();
+
   return (
     <>
-      <label htmlFor={props.id} hidden>
+      <label htmlFor={id} hidden>
         {props.placeholder}
       </label>
       <StyledInput
-        id={props.id}
+        id={id}
+        name={props.name}
+        value={props.value}
         type={props.type}
         placeholder={props.placeholder}
         inputWidth={props.inputWidth}
+        onChange={(e) => props.handleChange(e, props.experienceId)}
       />
     </>
   );

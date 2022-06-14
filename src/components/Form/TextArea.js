@@ -1,3 +1,4 @@
+import React, { useId } from 'react';
 import styled from 'styled-components';
 
 const StyledTextArea = styled.textarea`
@@ -11,12 +12,20 @@ const StyledTextArea = styled.textarea`
 `;
 
 function TextArea(props) {
+  const id = useId();
+
   return (
     <>
-      <label htmlFor={props.id} hidden>
+      <label htmlFor={id} hidden>
         {props.placeholder}
       </label>
-      <StyledTextArea id={props.id} placeholder={props.placeholder} />
+      <StyledTextArea
+        id={id}
+        value={props.value}
+        name={props.name}
+        placeholder={props.placeholder}
+        onChange={(e) => props.handleChange(e, props.experienceId)}
+      />
     </>
   );
 }

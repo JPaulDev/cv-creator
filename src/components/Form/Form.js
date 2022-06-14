@@ -11,12 +11,18 @@ const StyledForm = styled.form`
   padding: 10px 30px;
 `;
 
-function Form() {
+function Form(props) {
+  const { experience, handleExperienceChange, addNewExperience } = props;
+
   return (
     <StyledForm>
       <PersonalDetails />
       <ContactInformation />
-      <WorkExperience />
+      <WorkExperience
+        experience={experience}
+        handleExperienceChange={handleExperienceChange}
+        addNewExperience={addNewExperience}
+      />
     </StyledForm>
   );
 }

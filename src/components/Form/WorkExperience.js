@@ -1,25 +1,23 @@
-import styled from 'styled-components';
 import Fieldset from './Fieldset';
 import SectionHeader from './SectionHeader';
-import Input from './Input';
-import TextArea from './TextArea';
+import WorkExperienceInputs from './WorkExperienceInputs';
 
-const Div = styled.div`
-  display: flex;
-  column-gap: 10px;
-`;
+function WorkExperience(props) {
+  const { experience, handleExperienceChange, addNewExperience } = props;
 
-function WorkExperience() {
   return (
     <Fieldset>
       <SectionHeader header="Work Experience" />
-      <Input id="jobTitle" placeholder="Job title" type="text" />
-      <Input id="companyName" placeholder="Company name" type="text" />
-      <Div>
-        <Input id="from" placeholder="From" type="text" inputWidth="220px" />
-        <Input id="to" placeholder="To" type="text" inputWidth="220px" />
-      </Div>
-      <TextArea id="jobDescription" placeholder="Job description" />
+      {experience.map((experienceItem) => {
+        return (
+          <WorkExperienceInputs
+            key={experienceItem.id}
+            experienceItem={experienceItem}
+            handleExperienceChange={handleExperienceChange}
+          />
+        );
+      })}
+      <button onClick={(e) => addNewExperience(e)}>Add</button>
     </Fieldset>
   );
 }
