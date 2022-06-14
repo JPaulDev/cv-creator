@@ -1,6 +1,7 @@
 import Fieldset from './Fieldset';
 import SectionHeader from './SectionHeader';
 import WorkExperienceInputs from './WorkExperienceInputs';
+import Button from './Button';
 
 function WorkExperience(props) {
   const { experience, handleExperienceChange, addNewExperience } = props;
@@ -17,7 +18,11 @@ function WorkExperience(props) {
           />
         );
       })}
-      <button onClick={(e) => addNewExperience(e)}>Add</button>
+      <Button
+        buttonText="Add Employment"
+        onClick={addNewExperience}
+        buttonColor="#4ade80"
+      />
     </Fieldset>
   );
 }
