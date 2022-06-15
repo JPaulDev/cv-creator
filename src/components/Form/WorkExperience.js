@@ -1,6 +1,6 @@
 import Fieldset from './Fieldset';
 import SectionHeader from './SectionHeader';
-import WorkExperienceInputs from './WorkExperienceInputs';
+import WorkExperienceItem from './WorkExperienceItem';
 import Button from './Button';
 
 function WorkExperience(props) {
@@ -16,7 +16,7 @@ function WorkExperience(props) {
       <SectionHeader header="Work Experience" />
       {experience.map((experienceItem) => {
         return (
-          <WorkExperienceInputs
+          <WorkExperienceItem
             key={experienceItem.id}
             experienceItem={experienceItem}
             handleExperienceChange={handleExperienceChange}

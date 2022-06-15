@@ -8,7 +8,7 @@ const Div = styled.div`
   column-gap: 10px;
 `;
 
-function WorkExperienceInputs(props) {
+function WorkExperienceItem(props) {
   const { experienceItem, handleExperienceChange } = props;
 
   return (
@@ -66,4 +66,4 @@ function WorkExperienceInputs(props) {
   );
 }
 
-export default WorkExperienceInputs;
+export default WorkExperienceItem;
