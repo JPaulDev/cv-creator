@@ -9,6 +9,13 @@ const StyledMain = styled.main`
 `;
 
 function Main() {
+  const [personalDetails, setDetails] = useState({
+    firstName: '',
+    lastName: '',
+    title: '',
+    aboutMe: '',
+  });
+
   const [experience, setExperience] = useState([
     {
       id: uniqid(),
@@ -30,6 +37,12 @@ function Main() {
       educationEnd: '',
     },
   ]);
+
+  function handleDetailsChange(e) {
+    const { name, value } = e.target;
+
+    setDetails({ ...personalDetails, [name]: value });
+  }
 
   function handleExperienceChange(e, id) {
     const { name, value } = e.target;
@@ -103,6 +116,8 @@ function Main() {
   return (
     <StyledMain>
       <Form
+        personalDetails={personalDetails}
+        handleDetailsChange={handleDetailsChange}
         experience={experience}
         handleExperienceChange={handleExperienceChange}
         addNewExperience={addNewExperience}

@@ -14,6 +14,8 @@ const StyledForm = styled.form`
 
 function Form(props) {
   const {
+    personalDetails,
+    handleDetailsChange,
     experience,
     handleExperienceChange,
     addNewExperience,
@@ -25,7 +27,10 @@ function Form(props) {
 
   return (
     <StyledForm>
-      <PersonalDetails />
+      <PersonalDetails
+        personalDetails={personalDetails}
+        handleDetailsChange={handleDetailsChange}
+      />
       <ContactInformation />
       <WorkExperience
         experience={experience}
