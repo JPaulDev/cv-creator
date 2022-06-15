@@ -1,34 +1,28 @@
-import styled from 'styled-components';
 import Fieldset from './Fieldset';
 import SectionHeader from './SectionHeader';
-import Input from './Input';
+import EducationItem from './EducationItem';
+import Button from './Button';
 
-const Div = styled.div`
-  display: flex;
-  column-gap: 10px;
-`;
+function Education(props) {
+  const { education, handleEducationChange, addNewEducation } = props;
 
-function Education() {
   return (
     <Fieldset>
       <SectionHeader header="Education" />
-      <Input name="university" placeholder="University name" type="text" />
-      <Input name="city" placeholder="City" type="text" />
-      <Input name="degree" placeholder="Degree subject" type="text" />
-      <Div>
-        <Input
-          name="educationStart"
-          placeholder="Start date"
-          type="text"
-          inputWidth="220px"
-        />
-        <Input
-          name="educationEnd"
-          placeholder="End date"
-          type="text"
-          inputWidth="220px"
-        />
-      </Div>
+      {education.map((educationItem) => {
+        return (
+          <EducationItem
+            key={educationItem.id}
+            educationItem={educationItem}
+            handleEducationChange={handleEducationChange}
+          />
+        );
+      })}
+      <Button
+        buttonText="Add Education"
+        onClick={addNewEducation}
+        buttonColor="#4ade80"
+      />
     </Fieldset>
   );
 }

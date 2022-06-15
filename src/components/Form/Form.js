@@ -18,6 +18,9 @@ function Form(props) {
     handleExperienceChange,
     addNewExperience,
     deleteExperience,
+    education,
+    handleEducationChange,
+    addNewEducation,
   } = props;
 
   return (
@@ -30,7 +33,11 @@ function Form(props) {
         addNewExperience={addNewExperience}
         deleteExperience={deleteExperience}
       />
-      <Education />
+      <Education
+        education={education}
+        handleEducationChange={handleEducationChange}
+        addNewEducation={addNewEducation}
+      />
     </StyledForm>
   );
 }

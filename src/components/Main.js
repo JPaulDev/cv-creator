@@ -20,6 +20,17 @@ function Main() {
     },
   ]);
 
+  const [education, setEducation] = useState([
+    {
+      id: uniqid(),
+      universityName: '',
+      cityName: '',
+      degreeSubject: '',
+      educationStart: '',
+      educationEnd: '',
+    },
+  ]);
+
   function handleExperienceChange(e, id) {
     const { name, value } = e.target;
 
@@ -60,6 +71,35 @@ function Main() {
     setExperience(updatedExperience);
   }
 
+  function handleEducationChange(e, id) {
+    const { name, value } = e.target;
+
+    const updatedEducation = education.map((educationItem) => {
+      if (educationItem.id === id) {
+        return { ...educationItem, [name]: value };
+      }
+      return educationItem;
+    });
+
+    setEducation(updatedEducation);
+  }
+
+  function addNewEducation(e) {
+    e.preventDefault();
+
+    setEducation((prevState) => {
+      const newEducation = {
+        id: uniqid(),
+        universityName: '',
+        cityName: '',
+        degreeSubject: '',
+        educationStart: '',
+        educationEnd: '',
+      };
+      return [...prevState, newEducation];
+    });
+  }
+
   return (
     <StyledMain>
       <Form
@@ -67,6 +107,9 @@ function Main() {
         handleExperienceChange={handleExperienceChange}
         addNewExperience={addNewExperience}
         deleteExperience={deleteExperience}
+        education={education}
+        handleEducationChange={handleEducationChange}
+        addNewEducation={addNewEducation}
       />
     </StyledMain>
   );
