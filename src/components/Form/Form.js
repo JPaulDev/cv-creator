@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import PersonalDetails from './PersonalDetails';
 import ContactInformation from './ContactInformation';
 import WorkExperience from './WorkExperience';
+import Education from './Education';
 
 const StyledForm = styled.form`
   display: flex;
@@ -29,6 +30,7 @@ function Form(props) {
         addNewExperience={addNewExperience}
         deleteExperience={deleteExperience}
       />
+      <Education />
     </StyledForm>
   );
 }
