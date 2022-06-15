@@ -24,7 +24,7 @@ function TextArea(props) {
         value={props.value}
         name={props.name}
         placeholder={props.placeholder}
-        onChange={(e) => props.handleChange(e, props.experienceId)}
+        onChange={props.onChange}
       />
     </>
   );

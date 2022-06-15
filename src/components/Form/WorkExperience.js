@@ -21,7 +21,7 @@ function WorkExperience(props) {
             experienceItem={experienceItem}
             handleExperienceChange={handleExperienceChange}
             buttonText="Delete Employment"
-            onClick={deleteExperience}
+            deleteExperience={deleteExperience}
             buttonColor="#f87171"
           />
         );

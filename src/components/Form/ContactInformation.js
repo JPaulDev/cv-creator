@@ -6,10 +6,10 @@ function ContactInformation() {
   return (
     <Fieldset>
       <SectionHeader header="Contact Information" />
-      <Input id="phoneNumber" placeholder="Phone number" type="tel" />
-      <Input id="email" placeholder="Email" type="email" />
-      <Input id="streetAddress" placeholder="Street address" type="text" />
-      <Input id="cityName" placeholder="City name" type="text" />
+      <Input name="phoneNumber" placeholder="Phone number" type="tel" />
+      <Input name="email" placeholder="Email" type="email" />
+      <Input name="streetAddress" placeholder="Street address" type="text" />
+      <Input name="cityName" placeholder="City name" type="text" />
     </Fieldset>
   );
 }

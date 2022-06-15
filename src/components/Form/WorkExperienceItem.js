@@ -9,7 +9,7 @@ const Div = styled.div`
 `;
 
 function WorkExperienceItem(props) {
-  const { experienceItem, handleExperienceChange } = props;
+  const { experienceItem, handleExperienceChange, deleteExperience } = props;
 
   return (
     <>
@@ -18,16 +18,14 @@ function WorkExperienceItem(props) {
         placeholder="Job title"
         type="text"
         value={experienceItem.jobTitle}
-        experienceId={experienceItem.id}
-        handleChange={handleExperienceChange}
+        onChange={(e) => handleExperienceChange(e, experienceItem.id)}
       />
       <Input
         name="companyName"
         placeholder="Company name"
         type="text"
         value={experienceItem.companyName}
-        experienceId={experienceItem.id}
-        handleChange={handleExperienceChange}
+        onChange={(e) => handleExperienceChange(e, experienceItem.id)}
       />
       <Div>
         <Input
@@ -36,8 +34,7 @@ function WorkExperienceItem(props) {
           type="text"
           inputWidth="220px"
           value={experienceItem.workStart}
-          experienceId={experienceItem.id}
-          handleChange={handleExperienceChange}
+          onChange={(e) => handleExperienceChange(e, experienceItem.id)}
         />
         <Input
           name="workEnd"
@@ -45,21 +42,18 @@ function WorkExperienceItem(props) {
           type="text"
           inputWidth="220px"
           value={experienceItem.workEnd}
-          experienceId={experienceItem.id}
-          handleChange={handleExperienceChange}
+          onChange={(e) => handleExperienceChange(e, experienceItem.id)}
         />
       </Div>
       <TextArea
         name="jobDescription"
         placeholder="Job description"
         value={experienceItem.jobDescription}
-        experienceId={experienceItem.id}
-        handleChange={handleExperienceChange}
+        onChange={(e) => handleExperienceChange(e, experienceItem.id)}
       />
       <Button
         buttonText="Delete Employment"
-        deleteId={experienceItem.id}
-        onClick={props.onClick}
+        onClick={(e) => deleteExperience(e, experienceItem.id)}
         buttonColor="#f87171"
       />
     </>

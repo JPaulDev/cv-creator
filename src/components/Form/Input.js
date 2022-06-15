@@ -25,7 +25,7 @@ function Input(props) {
         type={props.type}
         placeholder={props.placeholder}
         inputWidth={props.inputWidth}
-        onChange={(e) => props.handleChange(e, props.experienceId)}
+        onChange={props.onChange}
       />
     </>
   );

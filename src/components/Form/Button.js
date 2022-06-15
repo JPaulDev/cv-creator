@@ -12,7 +12,7 @@ function Button(props) {
   return (
     <StyledButton
       type="button"
-      onClick={(e) => props.onClick(e, props.deleteId)}
+      onClick={props.onClick}
       buttonColor={props.buttonColor}
     >
       {props.buttonText}
