@@ -1,4 +1,4 @@
-import React, { useId } from 'react';
+import { useId } from 'react';
 import styled from 'styled-components';
 
 const StyledTextArea = styled.textarea`
@@ -12,19 +12,20 @@ const StyledTextArea = styled.textarea`
 `;
 
 function TextArea(props) {
+  const { name, value, placeholder, onChange } = props;
   const id = useId();
 
   return (
     <>
       <label htmlFor={id} hidden>
-        {props.placeholder}
+        {placeholder}
       </label>
       <StyledTextArea
         id={id}
-        value={props.value}
-        name={props.name}
-        placeholder={props.placeholder}
-        onChange={props.onChange}
+        value={value}
+        name={name}
+        placeholder={placeholder}
+        onChange={onChange}
       />
     </>
   );

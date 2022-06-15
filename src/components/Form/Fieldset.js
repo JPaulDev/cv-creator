@@ -6,6 +6,7 @@ const StyledFieldset = styled.fieldset`
   align-items: center;
   row-gap: 10px;
   border: none;
+  user-select: none;
 `;
 
 function Fieldset({ children }) {

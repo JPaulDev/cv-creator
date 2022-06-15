@@ -6,8 +6,8 @@ const Header = styled.h3`
   width: 100%;
 `;
 
-function SectionHeader(props) {
-  return <Header>{props.header}</Header>;
+function SectionHeader({ header }) {
+  return <Header>{header}</Header>;
 }
 
 export default SectionHeader;

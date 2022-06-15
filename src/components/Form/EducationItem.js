@@ -7,7 +7,7 @@ const Div = styled.div`
 `;
 
 function EducationItem(props) {
-  const { educationItem, handleEducationChange } = props;
+  const { educationItem, onEducationChange } = props;
 
   return (
     <>
@@ -15,19 +15,19 @@ function EducationItem(props) {
         name="universityName"
         placeholder="University name"
         type="text"
-        onChange={(e) => handleEducationChange(e, educationItem.id)}
+        onChange={(e) => onEducationChange(e, educationItem.id)}
       />
       <Input
         name="cityName"
         placeholder="City"
         type="text"
-        onChange={(e) => handleEducationChange(e, educationItem.id)}
+        onChange={(e) => onEducationChange(e, educationItem.id)}
       />
       <Input
         name="degreeSubject"
         placeholder="Degree subject"
         type="text"
-        onChange={(e) => handleEducationChange(e, educationItem.id)}
+        onChange={(e) => onEducationChange(e, educationItem.id)}
       />
       <Div>
         <Input
@@ -35,14 +35,14 @@ function EducationItem(props) {
           placeholder="Start date"
           type="text"
           inputWidth="220px"
-          onChange={(e) => handleEducationChange(e, educationItem.id)}
+          onChange={(e) => onEducationChange(e, educationItem.id)}
         />
         <Input
           name="educationEnd"
           placeholder="End date"
           type="text"
           inputWidth="220px"
-          onChange={(e) => handleEducationChange(e, educationItem.id)}
+          onChange={(e) => onEducationChange(e, educationItem.id)}
         />
       </Div>
     </>

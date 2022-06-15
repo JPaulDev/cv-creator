@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import uniqid from 'uniqid';
 import styled from 'styled-components';
 import Form from './Form/Form';
@@ -40,7 +40,6 @@ function Main() {
 
   function handleDetailsChange(e) {
     const { name, value } = e.target;
-
     setDetails({ ...personalDetails, [name]: value });
   }
 
@@ -57,7 +56,7 @@ function Main() {
     setExperience(updatedExperience);
   }
 
-  function addNewExperience(e) {
+  function handleAddExperience(e) {
     e.preventDefault();
 
     setExperience((prevState) => {
@@ -74,11 +73,11 @@ function Main() {
     });
   }
 
-  function deleteExperience(e, id) {
+  function handleDeleteExperience(e, id) {
     e.preventDefault();
 
     const updatedExperience = experience.filter(
-      (experience) => experience.id !== id,
+      (experienceItem) => experienceItem.id !== id,
     );
 
     setExperience(updatedExperience);
@@ -97,7 +96,7 @@ function Main() {
     setEducation(updatedEducation);
   }
 
-  function addNewEducation(e) {
+  function handleAddEducation(e) {
     e.preventDefault();
 
     setEducation((prevState) => {
@@ -109,6 +108,7 @@ function Main() {
         educationStart: '',
         educationEnd: '',
       };
+
       return [...prevState, newEducation];
     });
   }
@@ -117,14 +117,14 @@ function Main() {
     <StyledMain>
       <Form
         personalDetails={personalDetails}
-        handleDetailsChange={handleDetailsChange}
+        onDetailsChange={handleDetailsChange}
         experience={experience}
-        handleExperienceChange={handleExperienceChange}
-        addNewExperience={addNewExperience}
-        deleteExperience={deleteExperience}
+        onExperienceChange={handleExperienceChange}
+        onAddExperience={handleAddExperience}
+        onDeleteExperience={handleDeleteExperience}
         education={education}
-        handleEducationChange={handleEducationChange}
-        addNewEducation={addNewEducation}
+        onEducationChange={handleEducationChange}
+        onAddEducation={handleAddEducation}
       />
     </StyledMain>
   );

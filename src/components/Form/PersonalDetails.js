@@ -4,7 +4,7 @@ import Input from './Input';
 import TextArea from './TextArea';
 
 function PersonalDetails(props) {
-  const { personalDetails, handleDetailsChange } = props;
+  const { personalDetails, onDetailsChange } = props;
 
   return (
     <Fieldset>
@@ -14,27 +14,27 @@ function PersonalDetails(props) {
         placeholder="First name"
         type="text"
         value={personalDetails.firstName}
-        onChange={handleDetailsChange}
+        onChange={onDetailsChange}
       />
       <Input
         name="lastName"
         placeholder="Last name"
         type="text"
         value={personalDetails.lastName}
-        onChange={handleDetailsChange}
+        onChange={onDetailsChange}
       />
       <Input
         name="title"
         placeholder="Title"
         type="text"
         value={personalDetails.title}
-        onChange={handleDetailsChange}
+        onChange={onDetailsChange}
       />
       <TextArea
         name="aboutMe"
         placeholder="About me"
         value={personalDetails.aboutMe}
-        onChange={handleDetailsChange}
+        onChange={onDetailsChange}
       />
     </Fieldset>
   );

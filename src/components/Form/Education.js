@@ -4,23 +4,21 @@ import EducationItem from './EducationItem';
 import Button from './Button';
 
 function Education(props) {
-  const { education, handleEducationChange, addNewEducation } = props;
+  const { education, onEducationChange, onAddEducation } = props;
 
   return (
     <Fieldset>
       <SectionHeader header="Education" />
-      {education.map((educationItem) => {
-        return (
-          <EducationItem
-            key={educationItem.id}
-            educationItem={educationItem}
-            handleEducationChange={handleEducationChange}
-          />
-        );
-      })}
+      {education.map((educationItem) => (
+        <EducationItem
+          key={educationItem.id}
+          educationItem={educationItem}
+          onEducationChange={onEducationChange}
+        />
+      ))}
       <Button
         buttonText="Add Education"
-        onClick={addNewEducation}
+        onClick={onAddEducation}
         buttonColor="#4ade80"
       />
     </Fieldset>

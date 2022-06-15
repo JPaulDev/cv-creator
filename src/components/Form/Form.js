@@ -15,33 +15,33 @@ const StyledForm = styled.form`
 function Form(props) {
   const {
     personalDetails,
-    handleDetailsChange,
+    onDetailsChange,
     experience,
-    handleExperienceChange,
-    addNewExperience,
-    deleteExperience,
+    onExperienceChange,
+    onAddExperience,
+    onDeleteExperience,
     education,
-    handleEducationChange,
-    addNewEducation,
+    onEducationChange,
+    onAddEducation,
   } = props;
 
   return (
     <StyledForm>
       <PersonalDetails
         personalDetails={personalDetails}
-        handleDetailsChange={handleDetailsChange}
+        onDetailsChange={onDetailsChange}
       />
       <ContactInformation />
       <WorkExperience
         experience={experience}
-        handleExperienceChange={handleExperienceChange}
-        addNewExperience={addNewExperience}
-        deleteExperience={deleteExperience}
+        onExperienceChange={onExperienceChange}
+        onAddExperience={onAddExperience}
+        onDeleteExperience={onDeleteExperience}
       />
       <Education
         education={education}
-        handleEducationChange={handleEducationChange}
-        addNewEducation={addNewEducation}
+        onEducationChange={onEducationChange}
+        onAddEducation={onAddEducation}
       />
     </StyledForm>
   );

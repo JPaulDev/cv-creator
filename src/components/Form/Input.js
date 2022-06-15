@@ -1,4 +1,4 @@
-import React, { useId } from 'react';
+import { useId } from 'react';
 import styled from 'styled-components';
 
 const StyledInput = styled.input`
@@ -11,21 +11,22 @@ const StyledInput = styled.input`
 `;
 
 function Input(props) {
+  const { name, value, type, placeholder, inputWidth, onChange } = props;
   const id = useId();
 
   return (
     <>
       <label htmlFor={id} hidden>
-        {props.placeholder}
+        {placeholder}
       </label>
       <StyledInput
         id={id}
-        name={props.name}
-        value={props.value}
-        type={props.type}
-        placeholder={props.placeholder}
-        inputWidth={props.inputWidth}
-        onChange={props.onChange}
+        name={name}
+        value={value}
+        type={type}
+        placeholder={placeholder}
+        inputWidth={inputWidth}
+        onChange={onChange}
       />
     </>
   );

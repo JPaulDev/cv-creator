@@ -9,7 +9,7 @@ const Div = styled.div`
 `;
 
 function WorkExperienceItem(props) {
-  const { experienceItem, handleExperienceChange, deleteExperience } = props;
+  const { experienceItem, onExperienceChange, onDeleteExperience } = props;
 
   return (
     <>
@@ -18,14 +18,14 @@ function WorkExperienceItem(props) {
         placeholder="Job title"
         type="text"
         value={experienceItem.jobTitle}
-        onChange={(e) => handleExperienceChange(e, experienceItem.id)}
+        onChange={(e) => onExperienceChange(e, experienceItem.id)}
       />
       <Input
         name="companyName"
         placeholder="Company name"
         type="text"
         value={experienceItem.companyName}
-        onChange={(e) => handleExperienceChange(e, experienceItem.id)}
+        onChange={(e) => onExperienceChange(e, experienceItem.id)}
       />
       <Div>
         <Input
@@ -34,7 +34,7 @@ function WorkExperienceItem(props) {
           type="text"
           inputWidth="220px"
           value={experienceItem.workStart}
-          onChange={(e) => handleExperienceChange(e, experienceItem.id)}
+          onChange={(e) => onExperienceChange(e, experienceItem.id)}
         />
         <Input
           name="workEnd"
@@ -42,18 +42,18 @@ function WorkExperienceItem(props) {
           type="text"
           inputWidth="220px"
           value={experienceItem.workEnd}
-          onChange={(e) => handleExperienceChange(e, experienceItem.id)}
+          onChange={(e) => onExperienceChange(e, experienceItem.id)}
         />
       </Div>
       <TextArea
         name="jobDescription"
         placeholder="Job description"
         value={experienceItem.jobDescription}
-        onChange={(e) => handleExperienceChange(e, experienceItem.id)}
+        onChange={(e) => onExperienceChange(e, experienceItem.id)}
       />
       <Button
         buttonText="Delete Employment"
-        onClick={(e) => deleteExperience(e, experienceItem.id)}
+        onClick={(e) => onDeleteExperience(e, experienceItem.id)}
         buttonColor="#f87171"
       />
     </>

@@ -9,13 +9,11 @@ const StyledButton = styled.button`
 `;
 
 function Button(props) {
+  const { onClick, buttonColor, buttonText } = props;
+
   return (
-    <StyledButton
-      type="button"
-      onClick={props.onClick}
-      buttonColor={props.buttonColor}
-    >
-      {props.buttonText}
+    <StyledButton type="button" onClick={onClick} buttonColor={buttonColor}>
+      {buttonText}
     </StyledButton>
   );
 }

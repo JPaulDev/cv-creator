@@ -6,29 +6,27 @@ import Button from './Button';
 function WorkExperience(props) {
   const {
     experience,
-    handleExperienceChange,
-    addNewExperience,
-    deleteExperience,
+    onExperienceChange,
+    onAddExperience,
+    onDeleteExperience,
   } = props;
 
   return (
     <Fieldset>
       <SectionHeader header="Work Experience" />
-      {experience.map((experienceItem) => {
-        return (
-          <WorkExperienceItem
-            key={experienceItem.id}
-            experienceItem={experienceItem}
-            handleExperienceChange={handleExperienceChange}
-            buttonText="Delete Employment"
-            deleteExperience={deleteExperience}
-            buttonColor="#f87171"
-          />
-        );
-      })}
+      {experience.map((experienceItem) => (
+        <WorkExperienceItem
+          key={experienceItem.id}
+          experienceItem={experienceItem}
+          onExperienceChange={onExperienceChange}
+          buttonText="Delete Employment"
+          onDeleteExperience={onDeleteExperience}
+          buttonColor="#f87171"
+        />
+      ))}
       <Button
         buttonText="Add Employment"
-        onClick={addNewExperience}
+        onClick={onAddExperience}
         buttonColor="#4ade80"
       />
     </Fieldset>
