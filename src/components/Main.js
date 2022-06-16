@@ -125,6 +125,16 @@ function Main() {
     });
   }
 
+  function handleDeleteEducation(e, id) {
+    e.preventDefault();
+
+    const updatedEducation = education.filter(
+      (educationItem) => educationItem.id !== id,
+    );
+
+    setEducation(updatedEducation);
+  }
+
   return (
     <StyledMain>
       <Form
@@ -139,6 +149,7 @@ function Main() {
         education={education}
         onEducationChange={handleEducationChange}
         onAddEducation={handleAddEducation}
+        onDeleteEducation={handleDeleteEducation}
       />
     </StyledMain>
   );

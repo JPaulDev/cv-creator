@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Input from './Input';
+import Button from './Button';
 
 const Div = styled.div`
   display: flex;
@@ -7,7 +8,7 @@ const Div = styled.div`
 `;
 
 function EducationItem(props) {
-  const { educationItem, onEducationChange } = props;
+  const { educationItem, onEducationChange, onDeleteEducation } = props;
 
   return (
     <>
@@ -45,6 +46,11 @@ function EducationItem(props) {
           onChange={(e) => onEducationChange(e, educationItem.id)}
         />
       </Div>
+      <Button
+        buttonText="Delete Education"
+        onClick={(e) => onDeleteEducation(e, educationItem.id)}
+        buttonColor="#f87171"
+      />
     </>
   );
 }

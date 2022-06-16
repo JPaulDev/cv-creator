@@ -25,6 +25,7 @@ function Form(props) {
     education,
     onEducationChange,
     onAddEducation,
+    onDeleteEducation,
   } = props;
 
   return (
@@ -47,6 +48,7 @@ function Form(props) {
         education={education}
         onEducationChange={onEducationChange}
         onAddEducation={onAddEducation}
+        onDeleteEducation={onDeleteEducation}
       />
     </StyledForm>
   );

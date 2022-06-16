@@ -4,7 +4,12 @@ import EducationItem from './EducationItem';
 import Button from './Button';
 
 function Education(props) {
-  const { education, onEducationChange, onAddEducation } = props;
+  const {
+    education,
+    onEducationChange,
+    onAddEducation,
+    onDeleteEducation,
+  } = props;
 
   return (
     <Fieldset>
@@ -14,6 +19,9 @@ function Education(props) {
           key={educationItem.id}
           educationItem={educationItem}
           onEducationChange={onEducationChange}
+          buttonText="Delete Education"
+          onDeleteEducation={onDeleteEducation}
+          buttonColor="#f87171"
         />
       ))}
       <Button
