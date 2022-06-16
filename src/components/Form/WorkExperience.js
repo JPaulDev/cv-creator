@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import Fieldset from './Fieldset';
 import SectionHeader from './SectionHeader';
 import WorkExperienceItem from './WorkExperienceItem';
@@ -15,14 +16,18 @@ function WorkExperience(props) {
     <Fieldset>
       <SectionHeader header="Work Experience" />
       {experience.map((experienceItem) => (
-        <WorkExperienceItem
-          key={experienceItem.id}
-          experienceItem={experienceItem}
-          onExperienceChange={onExperienceChange}
-          buttonText="Delete Employment"
-          onDeleteExperience={onDeleteExperience}
-          buttonColor="#f87171"
-        />
+        <Fragment key={experienceItem.id}>
+          <WorkExperienceItem
+            experienceItem={experienceItem}
+            onExperienceChange={onExperienceChange}
+          />
+          <Button
+            buttonText="Delete Employment"
+            onClick={(e) => onDeleteExperience(e, experienceItem.id)}
+            buttonColor="#f87171"
+            buttonHoverColor="#ef4444"
+          />
+        </Fragment>
       ))}
       <Button
         buttonText="Add Employment"

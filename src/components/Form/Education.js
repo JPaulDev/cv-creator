@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import Fieldset from './Fieldset';
 import SectionHeader from './SectionHeader';
 import EducationItem from './EducationItem';
@@ -15,14 +16,18 @@ function Education(props) {
     <Fieldset>
       <SectionHeader header="Education" />
       {education.map((educationItem) => (
-        <EducationItem
-          key={educationItem.id}
-          educationItem={educationItem}
-          onEducationChange={onEducationChange}
-          buttonText="Delete Education"
-          onDeleteEducation={onDeleteEducation}
-          buttonColor="#f87171"
-        />
+        <Fragment key={educationItem.id}>
+          <EducationItem
+            educationItem={educationItem}
+            onEducationChange={onEducationChange}
+          />
+          <Button
+            buttonText="Delete Education"
+            onClick={(e) => onDeleteEducation(e, educationItem.id)}
+            buttonColor="#f87171"
+            buttonHoverColor="#ef4444"
+          />
+        </Fragment>
       ))}
       <Button
         buttonText="Add Education"

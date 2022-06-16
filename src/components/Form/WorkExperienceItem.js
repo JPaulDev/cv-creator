@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import Input from './Input';
 import TextArea from './TextArea';
-import Button from './Button';
 
 const Div = styled.div`
   display: flex;
@@ -9,7 +8,7 @@ const Div = styled.div`
 `;
 
 function WorkExperienceItem(props) {
-  const { experienceItem, onExperienceChange, onDeleteExperience } = props;
+  const { experienceItem, onExperienceChange } = props;
 
   return (
     <>
@@ -50,12 +49,6 @@ function WorkExperienceItem(props) {
         placeholder="Job description"
         value={experienceItem.jobDescription}
         onChange={(e) => onExperienceChange(e, experienceItem.id)}
-      />
-      <Button
-        buttonText="Delete Employment"
-        onClick={(e) => onDeleteExperience(e, experienceItem.id)}
-        buttonColor="#f87171"
-        buttonHoverColor="#ef4444"
       />
     </>
   );
