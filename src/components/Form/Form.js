@@ -14,6 +14,8 @@ const StyledForm = styled.form`
 
 function Form(props) {
   const {
+    contactInfo,
+    onContactChange,
     personalDetails,
     onDetailsChange,
     experience,
@@ -31,7 +33,10 @@ function Form(props) {
         personalDetails={personalDetails}
         onDetailsChange={onDetailsChange}
       />
-      <ContactInformation />
+      <ContactInformation
+        contactInfo={contactInfo}
+        onContactChange={onContactChange}
+      />
       <WorkExperience
         experience={experience}
         onExperienceChange={onExperienceChange}

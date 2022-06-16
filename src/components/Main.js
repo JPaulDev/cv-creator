@@ -16,6 +16,13 @@ function Main() {
     aboutMe: '',
   });
 
+  const [contactInfo, setContact] = useState({
+    phoneNumber: '',
+    email: '',
+    streetAddress: '',
+    cityName: '',
+  });
+
   const [experience, setExperience] = useState([
     {
       id: uniqid(),
@@ -41,6 +48,11 @@ function Main() {
   function handleDetailsChange(e) {
     const { name, value } = e.target;
     setDetails({ ...personalDetails, [name]: value });
+  }
+
+  function handleContactChange(e) {
+    const { name, value } = e.target;
+    setContact({ ...contactInfo, [name]: value });
   }
 
   function handleExperienceChange(e, id) {
@@ -116,6 +128,8 @@ function Main() {
   return (
     <StyledMain>
       <Form
+        contactInfo={contactInfo}
+        onContactChange={handleContactChange}
         personalDetails={personalDetails}
         onDetailsChange={handleDetailsChange}
         experience={experience}
