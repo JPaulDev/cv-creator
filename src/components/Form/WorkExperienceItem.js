@@ -55,6 +55,7 @@ function WorkExperienceItem(props) {
         buttonText="Delete Employment"
         onClick={(e) => onDeleteExperience(e, experienceItem.id)}
         buttonColor="#f87171"
+        buttonHoverColor="#ef4444"
       />
     </>
   );

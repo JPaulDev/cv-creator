@@ -50,6 +50,7 @@ function EducationItem(props) {
         buttonText="Delete Education"
         onClick={(e) => onDeleteEducation(e, educationItem.id)}
         buttonColor="#f87171"
+        buttonHoverColor="#ef4444"
       />
     </>
   );

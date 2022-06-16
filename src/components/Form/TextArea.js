@@ -8,7 +8,16 @@ const StyledTextArea = styled.textarea`
   border: none;
   outline: none;
   padding: 5px 5px;
-  border-radius: 5px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    border: 1px solid rgba(0, 0, 0, 0.7);
+  }
+  &:focus {
+    border: 1px solid rgba(0, 0, 0, 0.7);
+  }
 `;
 
 function TextArea(props) {

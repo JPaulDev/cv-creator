@@ -28,6 +28,7 @@ function WorkExperience(props) {
         buttonText="Add Employment"
         onClick={onAddExperience}
         buttonColor="#4ade80"
+        buttonHoverColor="#22c55e"
       />
     </Fieldset>
   );

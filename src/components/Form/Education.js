@@ -28,6 +28,7 @@ function Education(props) {
         buttonText="Add Education"
         onClick={onAddEducation}
         buttonColor="#4ade80"
+        buttonHoverColor="#22c55e"
       />
     </Fieldset>
   );
