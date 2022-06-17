@@ -2,6 +2,7 @@ import { useState } from 'react';
 import uniqid from 'uniqid';
 import styled from 'styled-components';
 import Form from './Form/Form';
+import CVPreview from './CVPreview/CVPreview';
 
 const StyledMain = styled.main`
   display: flex;
@@ -151,6 +152,7 @@ function Main() {
         onAddEducation={handleAddEducation}
         onDeleteEducation={handleDeleteEducation}
       />
+      <CVPreview />
     </StyledMain>
   );
 }
