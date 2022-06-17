@@ -9,13 +9,16 @@ import Education from './Education';
 
 const Div = styled.div`
   display: flex;
-  background-color: #f9fafb;
+  background-color: white;
   width: 653px;
   height: 927px;
   padding: 35px 20px;
   column-gap: 30px;
   position: sticky;
   top: 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.15),
+    0 8px 10px -6px rgb(0 0 0 / 0.15);
 `;
 
 const LeftDiv = styled.div`

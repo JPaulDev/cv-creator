@@ -7,6 +7,7 @@ const StyledFieldset = styled.fieldset`
   row-gap: 10px;
   border: none;
   user-select: none;
+  margin-bottom: 10px;
 `;
 
 function Fieldset({ children }) {

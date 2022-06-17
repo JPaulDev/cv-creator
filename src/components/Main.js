@@ -7,6 +7,9 @@ import CVPreview from './CVPreview/CVPreview';
 const StyledMain = styled.main`
   display: flex;
   justify-content: center;
+  column-gap: 50px;
+  flex: 1;
+  padding: 30px;
 `;
 
 function Main() {

@@ -13,6 +13,8 @@ const StyledHeader = styled.header`
 
 const PageTitle = styled.h1`
   font-size: 3rem;
+  font-family: 'Lobster', cursive;
+  font-weight: 500;
 `;
 
 const HeaderLogo = styled.img`
@@ -23,7 +25,7 @@ function Header() {
   return (
     <StyledHeader>
       <HeaderLogo src={logo} alt="A folded CV" />
-      <PageTitle>CV Creator</PageTitle>
+      <PageTitle>CV CREATOR</PageTitle>
     </StyledHeader>
   );
 }
