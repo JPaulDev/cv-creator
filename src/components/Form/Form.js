@@ -3,6 +3,7 @@ import PersonalDetails from './PersonalDetails';
 import ContactInformation from './ContactInformation';
 import WorkExperience from './WorkExperience';
 import Education from './Education';
+import Skills from './Skills';
 
 const StyledForm = styled.form`
   display: flex;
@@ -30,6 +31,10 @@ function Form(props) {
     onEducationChange,
     onAddEducation,
     onDeleteEducation,
+    skills,
+    onSkillChange,
+    onAddSkill,
+    onDeleteSkill,
   } = props;
 
   return (
@@ -53,6 +58,12 @@ function Form(props) {
         onEducationChange={onEducationChange}
         onAddEducation={onAddEducation}
         onDeleteEducation={onDeleteEducation}
+      />
+      <Skills
+        skills={skills}
+        onSkillChange={onSkillChange}
+        onDeleteSkill={onDeleteSkill}
+        onAddSkill={onAddSkill}
       />
     </StyledForm>
   );

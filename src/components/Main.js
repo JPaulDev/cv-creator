@@ -49,6 +49,13 @@ function Main() {
     },
   ]);
 
+  const [skills, setSkills] = useState([
+    {
+      id: uniqid(),
+      skill: '',
+    },
+  ]);
+
   function handleDetailsChange(e) {
     const { name, value } = e.target;
     setDetails({ ...personalDetails, [name]: value });
@@ -139,6 +146,40 @@ function Main() {
     setEducation(updatedEducation);
   }
 
+  function handleSkillChange(e, id) {
+    const { name, value } = e.target;
+
+    const updatedSkill = skills.map((skill) => {
+      if (skill.id === id) {
+        return { ...skill, [name]: value };
+      }
+      return skill;
+    });
+
+    setSkills(updatedSkill);
+  }
+
+  function handleAddSkill(e) {
+    e.preventDefault();
+
+    setSkills((prevState) => {
+      const newSkill = {
+        id: uniqid(),
+        skill: '',
+      };
+
+      return [...prevState, newSkill];
+    });
+  }
+
+  function handleDeleteSkill(e, id) {
+    e.preventDefault();
+
+    const updatedSkills = skills.filter((skill) => skill.id !== id);
+
+    setSkills(updatedSkills);
+  }
+
   return (
     <StyledMain>
       <Form
@@ -154,6 +195,10 @@ function Main() {
         onEducationChange={handleEducationChange}
         onAddEducation={handleAddEducation}
         onDeleteEducation={handleDeleteEducation}
+        skills={skills}
+        onSkillChange={handleSkillChange}
+        onAddSkill={handleAddSkill}
+        onDeleteSkill={handleDeleteSkill}
       />
       <CVPreview />
     </StyledMain>
