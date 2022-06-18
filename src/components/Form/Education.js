@@ -22,7 +22,8 @@ function Education(props) {
             onEducationChange={onEducationChange}
           />
           <Button
-            buttonText="Delete Education"
+            buttonText="Delete"
+            title="Delete education"
             onClick={(e) => onDeleteEducation(e, educationItem.id)}
             buttonColor="#f87171"
             buttonHoverColor="#ef4444"
@@ -30,7 +31,8 @@ function Education(props) {
         </Fragment>
       ))}
       <Button
-        buttonText="Add Education"
+        buttonText="Add"
+        title="Add additional education"
         onClick={onAddEducation}
         buttonColor="#4ade80"
         buttonHoverColor="#22c55e"

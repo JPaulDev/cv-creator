@@ -63,14 +63,14 @@ function Skills(props) {
             onChange={(e) => onSkillChange(e, skill.id)}
           />
           <DeleteButton
-            title="Delete Skill"
+            title="Delete skill"
             onClick={(e) => onDeleteSkill(e, skill.id)}
           >
             <ReactLogo />
           </DeleteButton>
         </Div>
       ))}
-      <AddButton title="Add Skill" onClick={onAddSkill}>
+      <AddButton title="Add a new skill" onClick={onAddSkill}>
         +
       </AddButton>
     </Fieldset>

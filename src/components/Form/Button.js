@@ -20,10 +20,11 @@ const StyledButton = styled.button`
 `;
 
 function Button(props) {
-  const { onClick, buttonText, buttonColor, buttonHoverColor } = props;
+  const { onClick, buttonText, buttonColor, buttonHoverColor, title } = props;
 
   return (
     <StyledButton
+      title={title}
       type="button"
       onClick={onClick}
       buttonColor={buttonColor}

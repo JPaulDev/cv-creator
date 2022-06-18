@@ -22,7 +22,8 @@ function WorkExperience(props) {
             onExperienceChange={onExperienceChange}
           />
           <Button
-            buttonText="Delete Employment"
+            buttonText="Delete"
+            title="Delete employment"
             onClick={(e) => onDeleteExperience(e, experienceItem.id)}
             buttonColor="#f87171"
             buttonHoverColor="#ef4444"
@@ -30,7 +31,8 @@ function WorkExperience(props) {
         </Fragment>
       ))}
       <Button
-        buttonText="Add Employment"
+        buttonText="Add"
+        title="Add additional employment"
         onClick={onAddExperience}
         buttonColor="#4ade80"
         buttonHoverColor="#22c55e"
