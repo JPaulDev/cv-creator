@@ -23,12 +23,18 @@ const Div = styled.div`
 
 const LeftDiv = styled.div`
   z-index: 10;
+  width: 214px;
+`;
+
+const RightDiv = styled.div`
+  width: 373px;
+  z-index: 10;
 `;
 
 const TopYellowDetail = styled.div`
-  background-color: #fdce58;
+  background: linear-gradient(to right, #fdce58 12%, 12%, #f8fafc 90%);
   position: absolute;
-  width: 80px;
+  width: 100%;
   height: 230px;
   left: 0;
   top: 0;
@@ -37,7 +43,7 @@ const TopYellowDetail = styled.div`
 const BottomYellowDetail = styled.div`
   background-color: #fdce58;
   position: absolute;
-  width: calc(100% - 264px);
+  width: 387px;
   height: 23px;
   bottom: 0;
   right: 0;

@@ -3,7 +3,7 @@ import SectionHeader from './SectionHeader';
 
 const Contact = styled.p`
   font-size: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 `;
 
 function ContactInformation(props) {
