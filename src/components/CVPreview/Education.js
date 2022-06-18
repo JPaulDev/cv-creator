@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Fragment } from 'react';
 import SectionHeader from './SectionHeader';
 import Title from './Title';
 import SmallTitle from './SmallTitle';
@@ -9,13 +10,34 @@ const Span = styled.span`
   margin-bottom: 15px;
 `;
 
-function Education() {
+function Education(props) {
   return (
     <section>
       <SectionHeader>EDUCATION</SectionHeader>
-      <Title>Degree subject</Title>
-      <SmallTitle>University name</SmallTitle>
-      <Span>2009 - 2010</Span>
+      {props.education.map((educationItem) => {
+        const {
+          id,
+          universityName,
+          cityName,
+          degreeSubject,
+          educationStart,
+          educationEnd,
+        } = educationItem;
+
+        return (
+          <Fragment key={id}>
+            <Title>{degreeSubject}</Title>
+            <SmallTitle>
+              {universityName}
+              {cityName ? `, ${cityName}` : cityName}
+            </SmallTitle>
+            <Span>
+              {educationStart}
+              {educationEnd ? ` - ${educationEnd}` : educationEnd}
+            </Span>
+          </Fragment>
+        );
+      })}
     </section>
   );
 }

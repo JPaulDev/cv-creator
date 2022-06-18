@@ -200,7 +200,13 @@ function Main() {
         onAddSkill={handleAddSkill}
         onDeleteSkill={handleDeleteSkill}
       />
-      <CVPreview />
+      <CVPreview
+        contactInfo={contactInfo}
+        personalDetails={personalDetails}
+        experience={experience}
+        education={education}
+        skills={skills}
+      />
     </StyledMain>
   );
 }

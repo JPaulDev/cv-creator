@@ -6,11 +6,18 @@ const Contact = styled.p`
   margin-bottom: 10px;
 `;
 
-function ContactInformation() {
+function ContactInformation(props) {
+  const { phoneNumber, email, streetAddress, cityName } = props.contactInfo;
+
   return (
     <section>
       <SectionHeader>CONTACTS</SectionHeader>
-      <Contact>Phone number</Contact>
+      <Contact>{phoneNumber}</Contact>
+      <Contact>{email}</Contact>
+      <Contact>
+        {streetAddress}
+        {cityName ? `, ${cityName}` : cityName}
+      </Contact>
     </section>
   );
 }

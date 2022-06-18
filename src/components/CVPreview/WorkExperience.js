@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Fragment } from 'react';
 import SectionHeader from './SectionHeader';
 import Title from './Title';
 import SmallTitle from './SmallTitle';
@@ -10,18 +11,32 @@ const Span = styled.span`
   margin-bottom: 3px;
 `;
 
-function WorkExperience() {
+function WorkExperience(props) {
   return (
     <section>
       <SectionHeader>WORK EXPERIENCE</SectionHeader>
-      <Title>Job title</Title>
-      <SmallTitle>Company name</SmallTitle>
-      <Span>2017 - Present</Span>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Duis aute irure
-        dolor in reprehenderit in voluptate.
-      </Paragraph>
+      {props.experience.map((experienceItem) => {
+        const {
+          id,
+          jobTitle,
+          companyName,
+          workStart,
+          workEnd,
+          jobDescription,
+        } = experienceItem;
+
+        return (
+          <Fragment key={id}>
+            <Title>{jobTitle}</Title>
+            <SmallTitle>{companyName}</SmallTitle>
+            <Span>
+              {workStart}
+              {workEnd ? ` - ${workEnd}` : workEnd}
+            </Span>
+            <Paragraph>{jobDescription}</Paragraph>
+          </Fragment>
+        );
+      })}
     </section>
   );
 }

@@ -22,12 +22,14 @@ const Title = styled.p`
   letter-spacing: 0.5px;
 `;
 
-function NameDisplay() {
+function NameDisplay(props) {
+  const { firstName, lastName, title } = props.personalDetails;
+
   return (
     <section>
-      <FirstName>First name</FirstName>
-      <LastName>Last name</LastName>
-      <Title>Title</Title>
+      <FirstName>{firstName}</FirstName>
+      <LastName>{lastName}</LastName>
+      <Title>{title}</Title>
     </section>
   );
 }

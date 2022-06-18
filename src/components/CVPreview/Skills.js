@@ -19,12 +19,14 @@ const ListItem = styled.li`
   }
 `;
 
-function Skills() {
+function Skills(props) {
   return (
     <Section>
       <SectionHeader>SKILLS</SectionHeader>
       <List>
-        <ListItem>Skill</ListItem>
+        {props.skills.map((skill) => (
+          <ListItem key={skill.id}>{skill.skill}</ListItem>
+        ))}
       </List>
     </Section>
   );
