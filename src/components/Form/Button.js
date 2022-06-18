@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 const StyledButton = styled.button`
-  min-width: 300px;
+  min-width: 250px;
   min-height: 30px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.8);
   background-color: ${(props) => props.buttonColor};
   border-radius: 5px;
   border: none;

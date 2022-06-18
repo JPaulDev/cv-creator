@@ -25,7 +25,7 @@ function Education(props) {
             buttonText="Delete"
             title="Delete education"
             onClick={(e) => onDeleteEducation(e, educationItem.id)}
-            buttonColor="#f87171"
+            buttonColor="#ff6060"
             buttonHoverColor="#ef4444"
           />
         </Fragment>

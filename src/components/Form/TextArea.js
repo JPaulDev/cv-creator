@@ -10,8 +10,12 @@ const StyledTextArea = styled.textarea`
   padding: 5px 5px;
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.2);
+  appearance: none;
   transition: all 0.1s ease-in-out;
 
+  &::placeholder {
+    font-size: 0.87rem;
+  }
   &:hover {
     border: 1px solid rgba(0, 0, 0, 0.7);
   }

@@ -4,6 +4,7 @@ const FirstName = styled.p`
   font-size: 20px;
   font-weight: 700;
   margin-top: 10px;
+  letter-spacing: 0.5px;
 `;
 
 const LastName = styled.p`
@@ -11,12 +12,14 @@ const LastName = styled.p`
   color: #fdce58;
   font-weight: 700;
   margin-bottom: 5px;
+  letter-spacing: 0.5px;
 `;
 
 const Title = styled.p`
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 50px;
+  letter-spacing: 0.5px;
 `;
 
 function NameDisplay() {

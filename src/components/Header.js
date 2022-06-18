@@ -14,7 +14,8 @@ const StyledHeader = styled.header`
 const PageTitle = styled.h1`
   font-size: 3rem;
   font-family: 'Lobster', cursive;
-  font-weight: 500;
+  font-weight: normal;
+  letter-spacing: 2px;
 `;
 
 const HeaderLogo = styled.img`

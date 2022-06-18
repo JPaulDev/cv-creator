@@ -10,9 +10,9 @@ const Div = styled.div`
 `;
 
 const AddButton = styled.button`
-  width: 35px;
-  height: 35px;
-  font-size: 35px;
+  width: 2.18rem;
+  height: 2.18rem;
+  font-size: 2.18rem;
   line-height: 20px;
   border-radius: 50%;
   border: none;
@@ -32,9 +32,9 @@ const AddButton = styled.button`
 `;
 
 const DeleteButton = styled.button`
-  width: 31px;
-  height: 31px;
-  fill: #f87171;
+  width: 1.93rem;
+  height: 1.93rem;
+  fill: #ff6060;
   border: none;
   user-select: none;
   cursor: pointer;
@@ -63,6 +63,7 @@ function Skills(props) {
             onChange={(e) => onSkillChange(e, skill.id)}
           />
           <DeleteButton
+            type="button"
             title="Delete skill"
             onClick={(e) => onDeleteSkill(e, skill.id)}
           >
@@ -70,7 +71,7 @@ function Skills(props) {
           </DeleteButton>
         </Div>
       ))}
-      <AddButton title="Add a new skill" onClick={onAddSkill}>
+      <AddButton type="button" title="Add a new skill" onClick={onAddSkill}>
         +
       </AddButton>
     </Fieldset>

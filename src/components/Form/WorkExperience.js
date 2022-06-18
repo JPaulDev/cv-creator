@@ -25,7 +25,7 @@ function WorkExperience(props) {
             buttonText="Delete"
             title="Delete employment"
             onClick={(e) => onDeleteExperience(e, experienceItem.id)}
-            buttonColor="#f87171"
+            buttonColor="#ff6060"
             buttonHoverColor="#ef4444"
           />
         </Fragment>
