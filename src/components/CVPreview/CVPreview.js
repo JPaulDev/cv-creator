@@ -50,13 +50,20 @@ const BottomYellowDetail = styled.div`
 `;
 
 function CVPreview(props) {
-  const { personalDetails, contactInfo, experience, education, skills } = props;
+  const {
+    photo,
+    personalDetails,
+    contactInfo,
+    experience,
+    education,
+    skills,
+  } = props;
 
   return (
     <Div>
       <TopYellowDetail />
       <LeftDiv>
-        <Picture />
+        <Picture photo={photo}/>
         <NameDisplay personalDetails={personalDetails} />
         <ContactInformation contactInfo={contactInfo} />
         <Skills skills={skills} />

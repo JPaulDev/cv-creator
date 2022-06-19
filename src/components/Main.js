@@ -13,6 +13,8 @@ const StyledMain = styled.main`
 `;
 
 function Main() {
+  const [photo, setPhoto] = useState(null);
+
   const [personalDetails, setDetails] = useState({
     firstName: '',
     lastName: '',
@@ -55,6 +57,19 @@ function Main() {
       skill: '',
     },
   ]);
+
+  function handlePhotoChange(e) {
+    const file = e.target.files[0];
+
+    if (file) {
+      const reader = new FileReader();
+
+      reader.onload = () => {
+        setPhoto(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  }
 
   function handleDetailsChange(e) {
     const { name, value } = e.target;
@@ -199,8 +214,10 @@ function Main() {
         onSkillChange={handleSkillChange}
         onAddSkill={handleAddSkill}
         onDeleteSkill={handleDeleteSkill}
+        onPhotoChange={handlePhotoChange}
       />
       <CVPreview
+        photo={photo}
         contactInfo={contactInfo}
         personalDetails={personalDetails}
         experience={experience}

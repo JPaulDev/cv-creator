@@ -2,9 +2,10 @@ import Fieldset from './Fieldset';
 import SectionHeader from './SectionHeader';
 import Input from './Input';
 import TextArea from './TextArea';
+import PhotoInput from './PhotoInput';
 
 function PersonalDetails(props) {
-  const { personalDetails, onDetailsChange } = props;
+  const { personalDetails, onDetailsChange, onPhotoChange } = props;
 
   return (
     <Fieldset>
@@ -36,6 +37,7 @@ function PersonalDetails(props) {
         value={personalDetails.aboutMe}
         onChange={onDetailsChange}
       />
+      <PhotoInput onPhotoChange={onPhotoChange} />
     </Fieldset>
   );
 }

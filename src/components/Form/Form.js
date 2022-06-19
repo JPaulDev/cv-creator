@@ -35,6 +35,7 @@ function Form(props) {
     onSkillChange,
     onAddSkill,
     onDeleteSkill,
+    onPhotoChange,
   } = props;
 
   return (
@@ -42,6 +43,7 @@ function Form(props) {
       <PersonalDetails
         personalDetails={personalDetails}
         onDetailsChange={onDetailsChange}
+        onPhotoChange={onPhotoChange}
       />
       <ContactInformation
         contactInfo={contactInfo}
