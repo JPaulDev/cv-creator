@@ -15,18 +15,21 @@ function EducationItem(props) {
         name="universityName"
         placeholder="University name"
         type="text"
+        value={educationItem.universityName}
         onChange={(e) => onEducationChange(e, educationItem.id)}
       />
       <Input
         name="cityName"
         placeholder="City"
         type="text"
+        value={educationItem.cityName}
         onChange={(e) => onEducationChange(e, educationItem.id)}
       />
       <Input
         name="degreeSubject"
         placeholder="Degree subject"
         type="text"
+        value={educationItem.degreeSubject}
         onChange={(e) => onEducationChange(e, educationItem.id)}
       />
       <Div>
@@ -35,6 +38,7 @@ function EducationItem(props) {
           placeholder="Start date"
           type="text"
           inputWidth="220px"
+          value={educationItem.educationStart}
           onChange={(e) => onEducationChange(e, educationItem.id)}
         />
         <Input
@@ -42,6 +46,7 @@ function EducationItem(props) {
           placeholder="End date"
           type="text"
           inputWidth="220px"
+          value={educationItem.educationEnd}
           onChange={(e) => onEducationChange(e, educationItem.id)}
         />
       </Div>
