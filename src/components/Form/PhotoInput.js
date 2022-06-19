@@ -33,7 +33,7 @@ function PhotoInput(props) {
 
   return (
     <>
-      <Label htmlFor={id}>
+      <Label title="Add a photo" htmlFor={id}>
         Add a photo
         <Input
           id={id}
