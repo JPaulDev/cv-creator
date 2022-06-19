@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import EmptyAvatar from '../../img/empty-avatar.jpg';
 
 const Img = styled.img`
   width: 214px;
@@ -9,7 +8,7 @@ const Img = styled.img`
 function Picture(props) {
   const { photo } = props;
 
-  return <Img src={photo || EmptyAvatar} />;
+  return <Img src={photo} />;
 }
 
 export default Picture;

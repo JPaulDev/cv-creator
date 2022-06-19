@@ -4,6 +4,7 @@ import ContactInformation from './ContactInformation';
 import WorkExperience from './WorkExperience';
 import Education from './Education';
 import Skills from './Skills';
+import Button from './Button';
 
 const StyledForm = styled.form`
   display: flex;
@@ -36,6 +37,7 @@ function Form(props) {
     onAddSkill,
     onDeleteSkill,
     onPhotoChange,
+    onFormReset,
   } = props;
 
   return (
@@ -66,6 +68,13 @@ function Form(props) {
         onSkillChange={onSkillChange}
         onDeleteSkill={onDeleteSkill}
         onAddSkill={onAddSkill}
+      />
+      <Button
+        buttonText="Reset"
+        title="Reset all inputs"
+        onClick={(e) => onFormReset(e)}
+        buttonColor="#93c5fd"
+        buttonHoverColor="#60a5fa"
       />
     </StyledForm>
   );

@@ -3,6 +3,7 @@ import uniqid from 'uniqid';
 import styled from 'styled-components';
 import Form from './Form/Form';
 import CVPreview from './CVPreview/CVPreview';
+import EmptyAvatar from '../img/empty-avatar.jpg';
 
 const StyledMain = styled.main`
   display: flex;
@@ -13,7 +14,7 @@ const StyledMain = styled.main`
 `;
 
 function Main() {
-  const [photo, setPhoto] = useState(null);
+  const [photo, setPhoto] = useState(EmptyAvatar);
 
   const [personalDetails, setDetails] = useState({
     firstName: '',
@@ -195,6 +196,51 @@ function Main() {
     setSkills(updatedSkills);
   }
 
+  function handleFormReset(e) {
+    e.preventDefault();
+    e.target.parentNode.reset();
+
+    setPhoto(EmptyAvatar);
+    setDetails({
+      firstName: '',
+      lastName: '',
+      title: '',
+      aboutMe: '',
+    });
+    setContact({
+      phoneNumber: '',
+      email: '',
+      streetAddress: '',
+      cityName: '',
+    });
+    setExperience([
+      {
+        id: uniqid(),
+        jobTitle: '',
+        companyName: '',
+        workStart: '',
+        workEnd: '',
+        jobDescription: '',
+      },
+    ]);
+    setEducation([
+      {
+        id: uniqid(),
+        universityName: '',
+        cityName: '',
+        degreeSubject: '',
+        educationStart: '',
+        educationEnd: '',
+      },
+    ]);
+    setSkills([
+      {
+        id: uniqid(),
+        skill: '',
+      },
+    ]);
+  }
+
   return (
     <StyledMain>
       <Form
@@ -215,6 +261,7 @@ function Main() {
         onAddSkill={handleAddSkill}
         onDeleteSkill={handleDeleteSkill}
         onPhotoChange={handlePhotoChange}
+        onFormReset={handleFormReset}
       />
       <CVPreview
         photo={photo}
