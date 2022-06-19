@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.js": "/cv-creator/static/js/main.307194de.js",
+    "static/media/example-avatar.jpg": "/cv-creator/static/media/example-avatar.d5cb4a6af31e336a2d4c.jpg",
+    "static/media/empty-avatar.jpg": "/cv-creator/static/media/empty-avatar.05f1c0b5d9ece4170eb3.jpg",
+    "static/media/github-logo.svg": "/cv-creator/static/media/github-logo.e9b7b125331804d04d0a15f9f231ba9f.svg",
+    "index.html": "/cv-creator/index.html",
+    "static/media/header-logo.svg": "/cv-creator/static/media/header-logo.7cea597bd1c4b84f29355cc8f38973d1.svg",
+    "static/media/delete-icon.svg": "/cv-creator/static/media/delete-icon.3eb71d3cd1e0719f23dcd386a6f60042.svg",
+    "main.307194de.js.map": "/cv-creator/static/js/main.307194de.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.307194de.js"
+  ]
+}
