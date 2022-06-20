@@ -5,12 +5,8 @@ import EducationItem from './EducationItem';
 import Button from './Button';
 
 function Education(props) {
-  const {
-    education,
-    onEducationChange,
-    onAddEducation,
-    onDeleteEducation,
-  } = props;
+  const { education, onEducationChange, onAddEducation, onDeleteEducation } =
+    props;
 
   return (
     <Fieldset>
