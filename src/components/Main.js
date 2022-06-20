@@ -252,10 +252,11 @@ function Main() {
   return (
     <StyledMain>
       <Form
-        contactInfo={contactInfo}
-        onContactChange={handleContactChange}
+        onPhotoChange={handlePhotoChange}
         personalDetails={personalDetails}
         onDetailsChange={handleDetailsChange}
+        contactInfo={contactInfo}
+        onContactChange={handleContactChange}
         experience={experience}
         onExperienceChange={handleExperienceChange}
         onAddExperience={handleAddExperience}
@@ -268,13 +269,12 @@ function Main() {
         onSkillChange={handleSkillChange}
         onAddSkill={handleAddSkill}
         onDeleteSkill={handleDeleteSkill}
-        onPhotoChange={handlePhotoChange}
         onFormReset={handleFormReset}
       />
       <CVPreview
         photo={photo}
-        contactInfo={contactInfo}
         personalDetails={personalDetails}
+        contactInfo={contactInfo}
         experience={experience}
         education={education}
         skills={skills}

@@ -19,10 +19,11 @@ const StyledForm = styled.form`
 
 function Form(props) {
   const {
-    contactInfo,
-    onContactChange,
+    onPhotoChange,
     personalDetails,
     onDetailsChange,
+    contactInfo,
+    onContactChange,
     experience,
     onExperienceChange,
     onAddExperience,
@@ -35,16 +36,15 @@ function Form(props) {
     onSkillChange,
     onAddSkill,
     onDeleteSkill,
-    onPhotoChange,
     onFormReset,
   } = props;
 
   return (
     <StyledForm>
       <PersonalDetails
+        onPhotoChange={onPhotoChange}
         personalDetails={personalDetails}
         onDetailsChange={onDetailsChange}
-        onPhotoChange={onPhotoChange}
       />
       <ContactInformation
         contactInfo={contactInfo}
@@ -69,12 +69,13 @@ function Form(props) {
         onAddSkill={onAddSkill}
       />
       <Button
-        buttonText="Reset"
         title="Reset all inputs"
         onClick={(e) => onFormReset(e)}
         buttonColor="#93c5fd"
         buttonHoverColor="#60a5fa"
-      />
+      >
+        Reset
+      </Button>
     </StyledForm>
   );
 }

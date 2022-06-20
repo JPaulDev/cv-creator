@@ -18,21 +18,23 @@ function Education(props) {
             onEducationChange={onEducationChange}
           />
           <Button
-            buttonText="Delete"
             title="Delete education"
             onClick={(e) => onDeleteEducation(e, educationItem.id)}
             buttonColor="#ff6060"
             buttonHoverColor="#ef4444"
-          />
+          >
+            Delete
+          </Button>
         </Fragment>
       ))}
       <Button
-        buttonText="Add"
         title="Add additional education"
         onClick={onAddEducation}
         buttonColor="#4ade80"
         buttonHoverColor="#22c55e"
-      />
+      >
+        Add
+      </Button>
     </Fieldset>
   );
 }

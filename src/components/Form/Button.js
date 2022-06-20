@@ -23,7 +23,7 @@ const StyledButton = styled.button`
 `;
 
 function Button(props) {
-  const { onClick, buttonText, buttonColor, buttonHoverColor, title } = props;
+  const { children, onClick, buttonColor, buttonHoverColor, title } = props;
 
   return (
     <StyledButton
@@ -33,7 +33,7 @@ function Button(props) {
       buttonColor={buttonColor}
       buttonHoverColor={buttonHoverColor}
     >
-      {buttonText}
+      {children}
     </StyledButton>
   );
 }
