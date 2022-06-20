@@ -8,9 +8,17 @@ import EmptyAvatar from '../img/empty-avatar.jpg';
 const StyledMain = styled.main`
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   column-gap: 50px;
   flex: 1;
   padding: 30px;
+
+  @media screen and (max-width: 1249px) {
+    flex-direction: column;
+    row-gap: 30px;
+    justify-content: flex-start;
+    align-items: center;
+  }
 `;
 
 function Main() {

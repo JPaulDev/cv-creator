@@ -4,6 +4,7 @@ const StyledButton = styled.button`
   min-width: 250px;
   min-height: 30px;
   font-weight: 600;
+  font-size: 0.875rem;
   color: rgba(0, 0, 0, 0.8);
   background-color: ${(props) => props.buttonColor};
   border-radius: 5px;

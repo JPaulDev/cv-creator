@@ -15,6 +15,7 @@ const AddButton = styled.button`
   font-size: 2.18rem;
   line-height: 20px;
   border-radius: 50%;
+  margin-bottom: 20px;
   border: none;
   color: white;
   background-color: #4ade80;
