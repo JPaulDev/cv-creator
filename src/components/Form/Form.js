@@ -37,6 +37,7 @@ function Form(props) {
     onAddSkill,
     onDeleteSkill,
     onFormReset,
+    onLoadExample,
   } = props;
 
   return (
@@ -75,6 +76,14 @@ function Form(props) {
         buttonHoverColor="#60a5fa"
       >
         Reset
+      </Button>
+      <Button
+        title="Load an example CV"
+        onClick={(e) => onLoadExample(e)}
+        buttonColor="#93c5fd"
+        buttonHoverColor="#60a5fa"
+      >
+        Load Example
       </Button>
     </StyledForm>
   );

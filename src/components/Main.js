@@ -3,7 +3,9 @@ import uniqid from 'uniqid';
 import styled from 'styled-components';
 import Form from './Form/Form';
 import CVPreview from './CVPreview/CVPreview';
-import EmptyAvatar from '../img/empty-avatar.jpg';
+import emptyAvatar from '../img/empty-avatar.jpg';
+import exampleAvatar from '../img/example-avatar.jpg';
+import * as example from '../example-cv';
 
 const StyledMain = styled.main`
   display: flex;
@@ -22,7 +24,7 @@ const StyledMain = styled.main`
 `;
 
 function Main() {
-  const [photo, setPhoto] = useState(EmptyAvatar);
+  const [photo, setPhoto] = useState(emptyAvatar);
 
   const [personalDetails, setDetails] = useState({
     firstName: '',
@@ -208,7 +210,7 @@ function Main() {
     e.preventDefault();
     e.target.parentNode.reset();
 
-    setPhoto(EmptyAvatar);
+    setPhoto(emptyAvatar);
     setDetails({
       firstName: '',
       lastName: '',
@@ -249,6 +251,17 @@ function Main() {
     ]);
   }
 
+  function handleLoadExample(e) {
+    e.preventDefault();
+
+    setPhoto(exampleAvatar);
+    setDetails(example.details);
+    setContact(example.contact);
+    setExperience(example.experience);
+    setEducation(example.education);
+    setSkills(example.skills);
+  }
+
   return (
     <StyledMain>
       <Form
@@ -270,6 +283,7 @@ function Main() {
         onAddSkill={handleAddSkill}
         onDeleteSkill={handleDeleteSkill}
         onFormReset={handleFormReset}
+        onLoadExample={handleLoadExample}
       />
       <CVPreview
         photo={photo}
